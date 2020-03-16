@@ -1,0 +1,30 @@
+library("ggplot2")
+#read in data set
+cats <- read.csv("cats.csv")
+cats$X <- NULL
+cats$gBwt <- cats$Bwt*1000
+cats$kgHwt <- cats$Hwt/1000
+
+#start off by just plotting the entire dataset using the most basic visualization in R
+plot(cats)
+
+#body vs heart weight in kg
+ggplot(cats, aes(x=Bwt, y=kgHwt)) +
+  geom_col() +
+  labs(title="Body vs Heart Weight", x = "Body Weight (kg)", y = "Heart Weight (kg)")
+
+#Grouped bar, better but not great
+ggplot(cats, aes(fill=Sex, y=kgHwt, x=Bwt)) + 
+  geom_bar(position="dodge", stat="identity") +
+  labs(title="Body vs Heart Weight", x = "Body Weight (kg)", y = "Heart Weight (kg)")
+
+#scatter plot
+ggplot(cats, aes(color=Sex, y=kgHwt, x=Bwt)) + 
+  geom_jitter()+
+  labs(title="Body vs Heart Weight", x = "Body Weight (kg)", y = "Heart Weight (kg)")
+
+#heat map
+ggplot(cats, aes(fill=gBwt, y=Sex, x=Hwt)) + 
+  geom_tile() +
+  labs(x = "Heart Weight (g)", y = "Sex of Cat", fill = "Body Weight (g)")
+ 
