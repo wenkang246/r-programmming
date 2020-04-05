@@ -1,0 +1,12 @@
+Package: RProg
+Type: Package
+Title: Cool R Package
+Version: 0.0.9000
+Author: Wen Kang [aut, cre]
+Maintainer: Wen Kang <wkang@mail.usf.edu>
+Description: I donn't know what this package will do yet.
+    Hopefully it'll be something cool.
+Depends: R (>= 3.1.2)
+License: CCO
+Encoding: UTF-8
+LazyData: true
