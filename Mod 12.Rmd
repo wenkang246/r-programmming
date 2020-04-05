@@ -1,0 +1,32 @@
+---
+title: "Module 12"
+author: "Wen Yan Kang"
+date: "4/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown Practice
+## This is an R Markdown document. 
+I will use this document to practice R Markdown formatting. For example, in R Markdown I can make lists both 
+1. Ordered
+  + (with a subitem)
+and
+* Unordered
+  + (with a subitem)
+
+I can emphasize words by *italicising* or **bolding** or even ~~strikethrough~~
+
+### Adding R Code chunks is also easy:
+```{r}
+summary(cars$dist)
+summary(cars$speed)
+```
+or even inline code. For example, there were `r nrow(cars)` cars studied in the **mtcars** dataset.
+
+______
+
+At the end of it all, simpily click on **Knit** and the markup document will generate!
